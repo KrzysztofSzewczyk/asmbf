@@ -21,5 +21,12 @@ fn main() {
 
     if let Ok(contents) = fs::read_to_string(file) {
         let status = compile(contents);
+
+        match status {
+            Result::Ok(_) => println!("compilation successful"),
+            Result::Err(e) => eprintln!("error: {}", e.get_ref().unwrap())
+        }
+    } else {
+        eprintln!("nitrogen: file not found: {}", file);
     }
 }
