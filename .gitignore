@@ -38,3 +38,5 @@ bfmake
 lib-bfm/lib-bfm.lua
 
 lib-bfm/lib-bfm-stub.lua
+
+nitrogen/target/
